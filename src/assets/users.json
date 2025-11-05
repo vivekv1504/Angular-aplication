@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Store Owner",
+    "email": "owner@sipstop.com",
+    "password": "owner123",
+    "role": "owner"
+  },
+  {
+    "id": 2,
+    "name": "John Customer",
+    "email": "customer@sipstop.com",
+    "password": "customer123",
+    "role": "customer"
+  },
+  {
+    "name": "prabhas",
+    "email": "prabhas@gmail.com",
+    "password": "prabhs@123",
+    "role": "customer",
+    "id": 3
+  },
+  {
+    "name": "vishnu",
+    "email": "vishnu@gmail.com",
+    "password": "vishnu123",
+    "role": "customer",
+    "id": 4
+  },
+  {
+    "name": "vamsi",
+    "email": "vamsi@gmail.com",
+    "password": "vamsi123",
+    "role": "customer",
+    "id": 5
+  },
+  {
+    "name": "Jahnavi",
+    "email": "janu@gmail.com",
+    "password": "janu123",
+    "role": "owner",
+    "id": 6
+  }
+]

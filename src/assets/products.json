@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Johnnie Walker Black Label",
+    "category": "Whisky",
+    "price": 45.99,
+    "description": "Rich, smooth blended Scotch whisky aged 12 years",
+    "stock": 50,
+    "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=400"
+  },
+  {
+    "id": 2,
+    "name": "Grey Goose Vodka",
+    "category": "Vodka",
+    "price": 39.99,
+    "description": "Premium French vodka distilled from wheat",
+    "stock": 35,
+    "image": "https://images.unsplash.com/photo-1564758866116-8e8d3a64730c?w=400"
+  },
+  {
+    "id": 3,
+    "name": "Patron Silver Tequila",
+    "category": "Tequila",
+    "price": 52.99,
+    "description": "100% blue agave tequila with a smooth finish",
+    "stock": 28,
+    "image": "https://images.unsplash.com/photo-1596286968242-e6f09f292d9a?w=400"
+  },
+  {
+    "id": 4,
+    "name": "Hennessy VS Cognac",
+    "category": "Cognac",
+    "price": 48.99,
+    "description": "Bold, full-bodied cognac with fruit notes",
+    "stock": 40,
+    "image": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=400"
+  },
+  {
+    "id": 5,
+    "name": "Bombay Sapphire Gin",
+    "category": "Gin",
+    "price": 29.99,
+    "description": "Premium London Dry Gin with 10 botanicals",
+    "stock": 60,
+    "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400"
+  },
+  {
+    "id": 6,
+    "name": "Mansion House Brandy",
+    "category": "Brandy",
+    "price": 330,
+    "description": "Finest quality matured French brandy",
+    "stock": 20,
+    "image": "https://images.unsplash.com/photo-1618885472179-5e474019f2a9?w=400"
+  },
+  {
+    "id": 7,
+    "name": "8PM",
+    "category": "Brandy",
+    "price": 330,
+    "description": "8PM is Invented by Y.S.Jagan Mohan Reddy",
+    "stock": 39,
+    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fsipdirect.com%2Fproducts%2Fmansion-house-finest-quality-matured-french-brandy&psig=AOvVaw2dRzcg0yFEb1AVssbF9s0r&ust=1762362184744000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCND2xPH82JADFQAAAAAdAAAAABAE"
+  },
+  {
+    "id": 8,
+    "name": "Black Label",
+    "category": "whisky",
+    "price": 5000,
+    "description": "Black label is premium brand .",
+    "stock": 10,
+    "image": "https://images.unsplash.com/photo-1592620352607-53100d32f9fb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774"
+  }
+]

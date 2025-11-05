@@ -1,0 +1,97 @@
+<div class="signup-container">
+  <div class="signup-card">
+    <div class="logo-section">
+      <h1 class="logo">🍷 SipStop</h1>
+      <p class="tagline">Your Premium Alcohol Store</p>
+    </div>
+
+    <h2>Create Account</h2>
+
+    <form (ngSubmit)="onSignup()" #signupForm="ngForm">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="user.name"
+          required
+          placeholder="Enter your full name"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="user.email"
+          required
+          placeholder="Enter your email"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="user.password"
+          required
+          placeholder="Enter your password"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          [(ngModel)]="confirmPassword"
+          required
+          placeholder="Confirm your password"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="role">I am a:</label>
+        <select
+          id="role"
+          name="role"
+          [(ngModel)]="user.role"
+          class="form-control"
+        >
+          <option value="customer">Customer</option>
+          <option value="owner">Store Owner</option>
+        </select>
+      </div>
+
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+
+      <div *ngIf="successMessage" class="success-message">
+        {{ successMessage }}
+      </div>
+
+      <button
+        type="submit"
+        class="btn-primary"
+        [disabled]="isLoading || !signupForm.valid"
+      >
+        {{ isLoading ? 'Creating Account...' : 'Sign Up' }}
+      </button>
+    </form>
+
+    <div class="login-link">
+      <p>Already have an account? <a routerLink="/login">Login here</a></p>
+    </div>
+  </div>
+</div>

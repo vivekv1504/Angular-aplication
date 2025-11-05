@@ -1,0 +1,83 @@
+<div class="customer-container">
+  <nav class="customer-nav">
+    <div class="nav-content">
+      <h1 class="logo">🍷 SipStop</h1>
+      <div class="nav-actions">
+        <span class="welcome">Welcome, {{ userName }}</span>
+        <button class="btn-cart" (click)="goToCart()">
+          🛒 Cart ({{ cartCount }})
+        </button>
+        <button class="btn-logout" (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="customer-content">
+    <div class="hero-section">
+      <h2>Premium Spirits & Wines</h2>
+      <p>Discover our curated collection of fine alcohols</p>
+    </div>
+
+    <div class="filters-section">
+      <input
+        type="text"
+        [(ngModel)]="searchTerm"
+        (ngModelChange)="onSearchChange()"
+        placeholder="Search products..."
+        class="search-input"
+      />
+      
+      <select
+        [(ngModel)]="selectedCategory"
+        (ngModelChange)="onCategoryChange()"
+        class="category-select"
+      >
+        <option *ngFor="let category of categories" [value]="category">
+          {{ category === 'all' ? 'All Categories' : category }}
+        </option>
+      </select>
+    </div>
+
+    <div *ngIf="showSuccessMessage" class="success-toast">
+      ✓ Added to cart successfully!
+    </div>
+
+    <div class="products-grid">
+      <div *ngFor="let product of filteredProducts" class="product-card">
+        <div class="product-image-container">
+          <img 
+            [src]="product.image" 
+            [alt]="product.name" 
+            class="product-image"
+            (error)="onImageError($event)"
+            loading="lazy"
+          />
+          <div class="stock-indicator" [class.out-of-stock]="product.stock === 0">
+            {{ product.stock === 0 ? 'Out of Stock' : product.stock + ' in stock' }}
+          </div>
+        </div>
+        
+        <div class="product-info">
+          <div class="product-category">{{ product.category }}</div>
+          <h3 class="product-name">{{ product.name }}</h3>
+          <p class="product-description">{{ product.description }}</p>
+          
+          <div class="product-footer">
+            <span class="product-price">${{ product.price.toFixed(2) }}</span>
+            <button
+              class="btn-add-cart"
+              (click)="addToCart(product)"
+              [disabled]="product.stock === 0"
+            >
+              {{ product.stock === 0 ? 'Unavailable' : 'Add to Cart' }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="filteredProducts.length === 0" class="no-products">
+      <p>No products found matching your criteria</p>
+    </div>
+  </div>
+</div>
