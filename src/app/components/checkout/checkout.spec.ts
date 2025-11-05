@@ -1,18 +1,31 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideHttpClient } from '@angular/common/http';
+import { provideRouter } from '@angular/router';
+import { CheckoutComponent } from './checkout';
+import { CartService } from '../../services/cart';
+import { AuthService } from '../../services/auth';
+import { OrderService } from '../../services/order';
+import { ProductService } from '../../services/product';
 
-import { Checkout } from './checkout';
-
-describe('Checkout', () => {
-  let component: Checkout;
-  let fixture: ComponentFixture<Checkout>;
+describe('CheckoutComponent', () => {
+  let component: CheckoutComponent;
+  let fixture: ComponentFixture<CheckoutComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Checkout]
+      imports: [CheckoutComponent],
+      providers: [
+        provideHttpClient(),
+        provideRouter([]),
+        CartService,
+        AuthService,
+        OrderService,
+        ProductService
+      ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Checkout);
+    fixture = TestBed.createComponent(CheckoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
