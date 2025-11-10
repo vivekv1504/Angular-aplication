@@ -40,5 +40,26 @@
     "password": "janu123",
     "role": "owner",
     "id": 6
+  },
+  {
+    "name": "Harsha vardhan",
+    "email": "harsh@gmail.com",
+    "password": "harsha123",
+    "role": "customer",
+    "id": 7
+  },
+  {
+    "name": "Bhavana",
+    "email": "bhavana@gmail.com",
+    "password": "bhav123",
+    "role": "customer",
+    "id": 8
+  },
+  {
+    "name": "shreyas",
+    "email": "shreyas@gmail.com",
+    "password": "shreyas123",
+    "role": "owner",
+    "id": 9
   }
 ]

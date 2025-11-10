@@ -118,30 +118,45 @@ export class CheckoutComponent implements OnInit {
       console.log('📦 Processing order and reducing stock...');
       
       // Reduce stock first
-      this.productService.reduceStockForOrder(stockUpdates).subscribe(stockSuccess => {
-        if (stockSuccess) {
-          console.log('✅ Stock reduced successfully');
-          
-          // Then save the order
-          this.orderService.addOrder(order).subscribe(orderSuccess => {
-            if (orderSuccess) {
-              console.log('✅ Order saved successfully:', order);
-              
-              this.orderComplete = true;
-              this.isProcessing = false;
-              
-              // Clear cart after successful order
-              this.cartService.clearCart();
-            } else {
-              console.error('❌ Failed to save order');
-              this.isProcessing = false;
-              alert('Failed to place order. Please try again.');
-            }
-          });
-        } else {
-          console.error('❌ Failed to reduce stock');
+      this.productService.reduceStockForOrder(stockUpdates).subscribe({
+        next: (stockSuccess) => {
+          if (stockSuccess) {
+            console.log('✅ Stock reduced successfully');
+            
+            // Then save the order
+            this.orderService.addOrder(order).subscribe({
+              next: (orderSuccess) => {
+                if (orderSuccess) {
+                  console.log('✅ Order saved successfully:', order);
+                  console.log('✅ Order Number:', this.orderNumber);
+                  
+                  this.orderComplete = true;
+                  this.isProcessing = false;
+                  
+                  // Clear cart after successful order
+                  this.cartService.clearCart();
+                } else {
+                  console.error('❌ Failed to save order');
+                  this.isProcessing = false;
+                  alert('Failed to place order. Please try again.');
+                }
+              },
+              error: (error) => {
+                console.error('❌ Error saving order:', error);
+                this.isProcessing = false;
+                alert('An error occurred while saving your order. Please contact support with order number: ' + this.orderNumber);
+              }
+            });
+          } else {
+            console.error('❌ Failed to reduce stock');
+            this.isProcessing = false;
+            alert('Some items may be out of stock. Please check your cart and try again.');
+          }
+        },
+        error: (error) => {
+          console.error('❌ Error reducing stock:', error);
           this.isProcessing = false;
-          alert('Some items may be out of stock. Please check your cart and try again.');
+          alert('An error occurred while processing your order. Please try again.');
         }
       });
     }, 2000);

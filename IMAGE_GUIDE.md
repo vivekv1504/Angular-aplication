@@ -343,3 +343,4 @@ https://via.placeholder.com/400x400/667eea/ffffff?text=Your+Product
 **🎊 Your images should now work perfectly! Enjoy your beautiful product catalog! 📸**
 
 
+

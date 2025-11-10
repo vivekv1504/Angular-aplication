@@ -353,3 +353,4 @@ Your SipStop application now has a beautiful, consistent bar/liquor themed backg
 
 **The background is now live on all 6 pages! Just restart your server and clear cache to see it.** 🍷✨
 
+

@@ -14,7 +14,7 @@
     "category": "Vodka",
     "price": 39.99,
     "description": "Premium French vodka distilled from wheat",
-    "stock": 35,
+    "stock": 30,
     "image": "https://images.unsplash.com/photo-1564758866116-8e8d3a64730c?w=400"
   },
   {
@@ -32,7 +32,7 @@
     "category": "Cognac",
     "price": 48.99,
     "description": "Bold, full-bodied cognac with fruit notes",
-    "stock": 40,
+    "stock": 38,
     "image": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=400"
   },
   {
@@ -70,5 +70,32 @@
     "description": "Black label is premium brand .",
     "stock": 10,
     "image": "https://images.unsplash.com/photo-1592620352607-53100d32f9fb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774"
+  },
+  {
+    "id": 9,
+    "name": "Jameson",
+    "category": "whisky",
+    "price": 400,
+    "description": "premium brand",
+    "stock": 40,
+    "image": "https://images.unsplash.com/photo-1616512050184-a59742ece650?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=627"
+  },
+  {
+    "id": 10,
+    "name": "Corona Extra Beer",
+    "category": "Bheer",
+    "price": 20,
+    "description": "A light, crisp Mexican beer best served with a wedge of lime.",
+    "stock": 100,
+    "image": "https://images.unsplash.com/photo-1646727029432-f718c739f64e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774"
+  },
+  {
+    "id": 11,
+    "name": "Kingfisher",
+    "category": "Bheer",
+    "price": 190,
+    "description": "Strong and smooth beer brewed with the finest barley malt.",
+    "stock": 100,
+    "image": "https://images.unsplash.com/photo-1607348985526-377b33c8d277?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774"
   }
 ]

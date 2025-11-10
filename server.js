@@ -29,11 +29,35 @@ const readJsonFile = (filePath) => {
 
 const writeJsonFile = (filePath, data) => {
   try {
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
-    console.log(`✅ Data written to ${filePath}`);
-    return true;
+    // Write to a temporary file first
+    const tempPath = `${filePath}.tmp`;
+    fs.writeFileSync(tempPath, JSON.stringify(data, null, 2), 'utf8');
+    
+    // Verify the temp file was written correctly
+    const tempData = fs.readFileSync(tempPath, 'utf8');
+    const parsedData = JSON.parse(tempData);
+    
+    if (parsedData && Array.isArray(parsedData)) {
+      // If valid, rename temp file to actual file (atomic operation)
+      fs.renameSync(tempPath, filePath);
+      console.log(`✅ Data written to ${filePath} (${parsedData.length} records)`);
+      return true;
+    } else {
+      console.error(`❌ Data validation failed for ${filePath}`);
+      fs.unlinkSync(tempPath); // Delete invalid temp file
+      return false;
+    }
   } catch (error) {
-    console.error(`Error writing to ${filePath}:`, error);
+    console.error(`❌ Error writing to ${filePath}:`, error);
+    // Clean up temp file if it exists
+    const tempPath = `${filePath}.tmp`;
+    if (fs.existsSync(tempPath)) {
+      try {
+        fs.unlinkSync(tempPath);
+      } catch (cleanupError) {
+        console.error('Failed to clean up temp file:', cleanupError);
+      }
+    }
     return false;
   }
 };
@@ -169,13 +193,27 @@ app.post('/api/orders', (req, res) => {
   
   orders.push(newOrder);
   
-  if (writeJsonFile(ORDERS_FILE, orders)) {
-    console.log('✅ Order saved successfully:', newOrder);
+  const writeSuccess = writeJsonFile(ORDERS_FILE, orders);
+  
+  if (writeSuccess) {
+    console.log('✅ Order saved successfully to JSON file');
+    console.log(`✅ Order ID: ${newOrder.id}, Order Number: ${newOrder.orderNumber}`);
     console.log(`📊 Total orders in database: ${orders.length}`);
-    res.status(201).json({ success: true, order: newOrder });
+    
+    // Verify the order was actually written by reading it back
+    const verifyOrders = readJsonFile(ORDERS_FILE);
+    const savedOrder = verifyOrders.find(o => o.id === newOrder.id);
+    
+    if (savedOrder) {
+      console.log('✅ Order verified in JSON file');
+      res.status(201).json({ success: true, order: newOrder });
+    } else {
+      console.error('❌ Order not found in file after write');
+      res.status(500).json({ error: 'Failed to verify order save' });
+    }
   } else {
     console.error('❌ Failed to write order to file');
-    res.status(500).json({ error: 'Failed to save order' });
+    res.status(500).json({ error: 'Failed to save order to file' });
   }
 });
 

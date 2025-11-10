@@ -173,5 +173,75 @@
       "cardNumber": "****3084",
       "cardName": "vivek"
     }
+  },
+  {
+    "id": 6,
+    "userId": 7,
+    "items": [
+      {
+        "product": {
+          "id": 2,
+          "name": "Grey Goose Vodka",
+          "category": "Vodka",
+          "price": 39.99,
+          "description": "Premium French vodka distilled from wheat",
+          "stock": 35,
+          "image": "https://images.unsplash.com/photo-1564758866116-8e8d3a64730c?w=400"
+        },
+        "quantity": 5
+      }
+    ],
+    "total": 219.94500000000002,
+    "date": "2025-11-05T16:34:36.651Z",
+    "status": "Completed",
+    "orderNumber": "SS263982",
+    "shippingInfo": {
+      "fullName": "Harsha vardhan",
+      "email": "harsh@gmail.com",
+      "phone": "07569957407",
+      "address": "Narasareddy palem village, kaligiri mandal, China annaluru",
+      "city": "Nellore",
+      "state": "Andhra Pradesh",
+      "zipCode": "524224"
+    },
+    "paymentInfo": {
+      "cardNumber": "****7390",
+      "cardName": "Harsha Vardhan"
+    }
+  },
+  {
+    "id": 7,
+    "userId": 8,
+    "items": [
+      {
+        "product": {
+          "id": 4,
+          "name": "Hennessy VS Cognac",
+          "category": "Cognac",
+          "price": 48.99,
+          "description": "Bold, full-bodied cognac with fruit notes",
+          "stock": 40,
+          "image": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=400"
+        },
+        "quantity": 2
+      }
+    ],
+    "total": 107.778,
+    "date": "2025-11-07T06:20:08.299Z",
+    "status": "Completed",
+    "orderNumber": "SS721828",
+    "shippingInfo": {
+      "fullName": "Bhavana",
+      "email": "bhavana@gmail.com",
+      "phone": "07569957407",
+      "address": "Narasareddy palem village, kaligiri mandal, China annaluru",
+      "city": "Nellore",
+      "state": "Andhra Pradesh",
+      "zipCode": "524224"
+    },
+    "paymentInfo": {
+      "cardNumber": "****5678",
+      "cardName": "bhavnaa"
+    }
   }
 ]
