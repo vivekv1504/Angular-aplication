@@ -5,7 +5,7 @@
     "category": "Whisky",
     "price": 45.99,
     "description": "Rich, smooth blended Scotch whisky aged 12 years",
-    "stock": 50,
+    "stock": 49,
     "image": "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=400"
   },
   {
@@ -14,8 +14,8 @@
     "category": "Vodka",
     "price": 39.99,
     "description": "Premium French vodka distilled from wheat",
-    "stock": 30,
-    "image": "https://images.unsplash.com/photo-1564758866116-8e8d3a64730c?w=400"
+    "stock": 29,
+    "image": "https://images.unsplash.com/photo-1650477021184-6fe8ef5b846e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1299"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "price": 52.99,
     "description": "100% blue agave tequila with a smooth finish",
     "stock": 28,
-    "image": "https://images.unsplash.com/photo-1596286968242-e6f09f292d9a?w=400"
+    "image": "https://images.unsplash.com/photo-1693080829600-c6c01404afb0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2370"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "category": "Gin",
     "price": 29.99,
     "description": "Premium London Dry Gin with 10 botanicals",
-    "stock": 60,
+    "stock": 58,
     "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400"
   },
   {
@@ -50,7 +50,7 @@
     "category": "Brandy",
     "price": 330,
     "description": "Finest quality matured French brandy",
-    "stock": 20,
+    "stock": 17,
     "image": "https://images.unsplash.com/photo-1618885472179-5e474019f2a9?w=400"
   },
   {
@@ -59,7 +59,7 @@
     "category": "whisky",
     "price": 5000,
     "description": "Black label is premium brand .",
-    "stock": 10,
+    "stock": 9,
     "image": "https://images.unsplash.com/photo-1592620352607-53100d32f9fb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774"
   },
   {
@@ -68,7 +68,7 @@
     "category": "whisky",
     "price": 400,
     "description": "premium brand",
-    "stock": 40,
+    "stock": 39,
     "image": "https://images.unsplash.com/photo-1616512050184-a59742ece650?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=627"
   },
   {
@@ -113,7 +113,16 @@
     "category": "Tequila",
     "price": 200,
     "description": "Traditional tequila with a smooth agave taste and hints of caramel. Great for shots or margaritas.",
-    "stock": 50,
+    "stock": 49,
     "image": "https://images.unsplash.com/photo-1566086113086-6d8701d1d4db?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=928"
+  },
+  {
+    "id": 15,
+    "name": "Smirnoff",
+    "category": "Vodka",
+    "price": 500,
+    "description": "World’s most popular vodka brand. Triple distilled and filtered 10 times for purity. Ideal for mixed drinks.",
+    "stock": 70,
+    "image": "https://images.unsplash.com/photo-1550985543-f47f38aeee65?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1335"
   }
 ]
